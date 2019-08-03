@@ -13,18 +13,18 @@
 },
 {
   Owner:"Car2go",
-  ImageURL:"https://upload.wikimedia.org/wikipedia/commons/3/30/Car2Go_logo.jpg”,
+  ImageURL:"https://upload.wikimedia.org/wikipedia/commons/3/30/Car2Go_logo.jpg",
   ElementLink:"https://www.car2go.com/"
 },
 {
   Owner:"somedifferent element 0",
-  ImageURL:"link”,
+  ImageURL:"link",
   ElementLink:"link"
 },
 {
   Owner:"somedifferent element 1",
-  ImageURL:"link”,
+  ImageURL:"link",
   ElementLink:"link"
-},{…},{…},…
+}
 ]
 }
