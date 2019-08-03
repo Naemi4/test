@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Daimler</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">     
+    </head>
+    
+    <body>
+    <div class="container-fluid" id=liste>
+        <div class="card m-4">
+            <div class="card-header">
+                Featured
+            </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                </ul>
+            </div>
+        
+          <div class="card m-4">
+            <div class="card-header">
+                Featured
+            </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            function loadJSON(callback) {   
+                var xobj = new XMLHttpRequest();
+                xobj.overrideMimeType("application/json");
+                xobj.open('GET', '../data.json', true);
+                xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    callback(JSON.parse(xobj.responseText));
+                }
+            };
+                xobj.send(null);  
+            }
+            
+            function createList(list){
+                for(i=0; i<list.length; i++){
+                    document.getElementById("liste").innerHTML=document.getElementById("liste").innerHTML + 
+                        "<div class='card m-4'> <div class='card-header'>" + list[i].Owner + 
+                        "</div> <ul class='list-group list-group-flush'><li class='list-group-item'>" + list[i].ImageURL + "</li><li class='list-group-item'>" + list[i].ImageURL + " </ul></div>"
+                }
+            }
+            
+            var content;
+            loadJSON('data.json', function(text){
+                content = text;
+                createList(content);
+            });
+        </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
