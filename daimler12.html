@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Daimler</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+        <style>
+            .height{
+                height: 300px;
+            }
+            h1 {
+                    text-align: center;
+                    padding: 20px;
+                }
+            centering{
+               align-items:center;
+            }
+            
+        
+   .box {
+}
+.box img {
+   max-height: 200px;
+}
+        </style>
+    </head>
+    
+    <body>
+        <h1> Übersicht </h1>
+    <div class="container-fluid">
+        <div class="row" id="liste">
+        </div>
+        </div>   
+        
+        <script type="text/javascript" src="data.json"></script>
+        <script>
+
+            function createList(list){
+                for(i=0; i<list.length; i++){
+                    document.getElementById("liste").innerHTML=document.getElementById("liste").innerHTML + 
+                        "<div class='m-3 col-md-4 col-lg-2 col-sm-6 col-xs-6 mx-auto'><a href='"+list[i].ElementLink +"' class='centering'><div class='p-3 border mx-3 height d-flex m-auto align-items-center justify-content-center box'><img src='"+ list[i].ImageURL +"' alt='logo_"+list[i].Owner+"' class='img-fluid'></div></a></div>"
+                }
+            }
+
+            
+            createList(data["private_966969e1-ff76-4024-ba5f-1441a94fbe59"]);
+                
+        </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
